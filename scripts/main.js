@@ -1,5 +1,5 @@
 ﻿var myImage = document.querySelector('img');
-
+/*
 myImage.onclick = function () {
     var mySrc = myImage.getAttribute('src');
     if (mySrc === 'images/images.png') {
@@ -8,6 +8,28 @@ myImage.onclick = function () {
         myImage.setAttribute('src', 'images/images.png');
     }
 }
+
+myImage.onclick = function () {
+    var src = document.getElementById("demo").innerHTML;
+    if (src === 'picture1') {
+        document.getElementById("demo").innerHTML = 'picture2';
+    } else {
+        document.getElementById('demo').innerHTML = 'picture1';
+    }
+}
+*/
+
+myImage.onclick = function () {
+    var picSrc = myImage.getAttribute('src');
+    if (picSrc === 'images/images.png') {
+        document.getElementById("demo").innerHTML = "picture2";
+        myImage.setAttribute('src', 'images/picture2.jpg');
+    } else {
+        document.getElementById("demo").innerHTML = "picture1";
+        myImage.setAttribute('src', 'images/images.png');
+    }
+}
+
 
 document.querySelector('li').onclick = function () {
     alert('pick your mom, small shit!');
